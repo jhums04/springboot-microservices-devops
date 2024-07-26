@@ -36,7 +36,7 @@ This repository showcases a SpringBoot microservices integrated with various Dev
    docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts-jdk17
 3. **Expose Jenkins with Ngrok:**
    ```bash
-   Expose Jenkins with Ngrok:
+   ngrok http 8080
 
 
 ### Running the Microservices
