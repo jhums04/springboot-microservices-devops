@@ -18,7 +18,7 @@ pipeline {
         stage("Docker Build") {
             steps{
                 dir('book-service')
-                    def dockerImage = docker.build(env.DOCKER_IMAGE, '.')
+                    sh 'docker build -t ${DOCKER_IMAGE} .'
             }
             }
         }
