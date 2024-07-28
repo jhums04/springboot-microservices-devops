@@ -17,8 +17,9 @@ pipeline {
 
         stage("Docker Build") {
             steps{
-                dir('book-service')
+                dir('book-service') {
                     sh 'docker build -t ${DOCKER_IMAGE} .'
+                }
             }
             }
         }
