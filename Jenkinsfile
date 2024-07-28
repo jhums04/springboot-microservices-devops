@@ -4,12 +4,16 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh 'mvn -DskipTests clean package'
+                dir('book-service') {
+                    sh 'mvn -DskipTests clean package'
+                }
             }
         }
         stage("Test") {
             steps {
-                'mvn test'
+                dir('book-service') {
+                    sh 'mvn test'
+                }
             }
         }
     }
